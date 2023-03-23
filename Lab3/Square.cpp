@@ -1,20 +1,25 @@
 #pragma once
 
-#include "Rectangle.cpp"
+#include "Shape.cpp"
 
-class Square : public Rectangle
+class Square : public Shape
 {
 public:
-	Square(int size) : Rectangle(size, size) {}
+	Square(int size)
+	{
+		this->size = size;
+	}
 
-	void setWidth(int width) override
+	void setSize(int size)
 	{
-		this->width = width;
-		this->height = width;
+		this->size = size;
 	}
-	void setHeight(int height) override
+
+	int calculateArea() override
 	{
-		this->height = height;
-		this->width = height;
+		return this->size * this->size;
 	}
+
+private:
+	int size;
 };

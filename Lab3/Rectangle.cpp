@@ -1,6 +1,8 @@
 #pragma once
 
-class Rectangle
+#include "Shape.cpp";
+
+class Rectangle : public Shape
 {
 public:
 	Rectangle(int width, int height)
@@ -15,7 +17,8 @@ public:
 	virtual void setWidth(int width) { this->width = width; }
 	virtual void setHeight(int height) { this->height = height; }
 
-	int calculateArea() { return this->height * this->width; }
-protected:
+	int calculateArea() override { return this->height * this->width; }
+
+private:
 	int width, height;
 };
