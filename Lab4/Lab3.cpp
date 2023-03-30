@@ -29,12 +29,12 @@ int main()
 	House house(tileSet);
 	Person person("Josef", "Zacek", house);
 
-	if (person.getHouse().getFloor().calculateArea() > 200)
+	if (person.hasLargeFloor())
 	{
-		cout << "House has large " << person.getHouse().getFloor().getColor() << " " << person.getHouse().getFloor().getMaterial() << " floor (" << person.getHouse().getFloor().calculateArea() << " m^2)" << endl;
+		cout << person.firstName << " " << person.lastName << " has large floor" << endl;
 	}
 	else
 	{
-		cout << "House has small " << person.getHouse().getFloor().getColor() << " " << person.getHouse().getFloor().getMaterial() << " floor (" << person.getHouse().getFloor().calculateArea() << " m^2)" << endl;
+		cout << person.firstName << " " << person.lastName << " has small floor" << endl;
 	}
 }

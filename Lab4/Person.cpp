@@ -12,10 +12,16 @@ public:
 		this->house = house;
 	}
 
-	House getHouse() { return this->house; }
+	// House getHouse() { return this->house; }
 
-protected:
+	bool hasLargeFloor()
+	{
+		return house.tileSet.calculateArea() > 200;
+	}
+
 	string firstName;
 	string lastName;
+
+protected:
 	House house;
 };

@@ -11,8 +11,7 @@ public:
 		this->tileSet = tileSet;
 	}
 
-	FloorTile getFloor() { return this->tileSet; }
+	// FloorTile getFloor() { return this->tileSet; }
 
-protected:
 	FloorTile tileSet;
 };
